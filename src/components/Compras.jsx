@@ -15,8 +15,8 @@ const Compras = () => {
 
   const handleClickRestar = () => {
     setValor(valor - 500)
-    if(valor === 0){
-      setValor(0)
+    if(valor === 500){
+      setValor(500)
     }
   }
 
