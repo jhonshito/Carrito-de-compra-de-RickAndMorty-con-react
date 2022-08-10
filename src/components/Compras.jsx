@@ -5,8 +5,10 @@ import Loading from './Loading'
 const Compras = () => {
 
   const {id} = useParams()
-  
   const [valor, setValor] = useState(500)
+
+  let nuevoNumero = new Intl.NumberFormat().format(valor)
+  // console.log(nuevoNumero)
   const [loading, setLoading] = useState(false)
 
   const handleClickSumar = () => {
@@ -22,11 +24,16 @@ const Compras = () => {
 
   const handleClick = () => {
 
+
+
+
+
+    
     if(valor >= 500){
       Swal.fire({
         icon: 'success',
         title: 'Felicidades',
-        text: `Compraste a : ${data.name} Con un valor de : $${valor}`,
+        text: `Compraste a : ${data.name} Con un valor de : $${nuevoNumero}`,
         imageUrl: `${data.image}`,
         imageHeight: 200
       })
@@ -39,7 +46,7 @@ const Compras = () => {
     }
   }
   const [data, setData] = useState([])
-  console.log(data)
+  // console.log(data)
   const fetchApi = async() => {
       try {
         setLoading(true)
@@ -73,7 +80,7 @@ const Compras = () => {
           <h2 className="lead fs-1 text-center">{data.species}</h2>
           <h2 className='alert alert-success lead fs-2 text-center'>
             <i className="bi bi-currency-dollar"></i>
-            {valor}
+            {nuevoNumero}
             <button onClick={handleClickSumar} className="btn btn-success mx-3">+</button>
             <button onClick={handleClickRestar} className="btn btn-danger">-</button>
           </h2>
