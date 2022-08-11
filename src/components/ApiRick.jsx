@@ -6,13 +6,6 @@ const ApiRick = () => {
 
     const [data, setData] = useState([])
 
-
-
-
-
-
-    
-
     const [loading, setLoading] = useState(false)
     const fetchApi = async() => {
         try {
