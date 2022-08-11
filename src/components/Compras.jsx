@@ -23,8 +23,6 @@ const Compras = () => {
   }
 
   const handleClick = () => {
-
-
     if(valor >= 500){
       Swal.fire({
         icon: 'success',
@@ -91,5 +89,4 @@ const Compras = () => {
     </div>
   )
 }
-
 export default Compras
