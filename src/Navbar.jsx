@@ -5,8 +5,15 @@ import { Link } from 'react-router-dom'
 
 const Navbar = ({imagen, precio}) => {
 
+    // console.log(imagen)
+
+    // const handleProducto = (e) => {
+    //     e.preventDefault()
+    //     console.log(precio)
+    // }
+
     const precioFormatiado = new Intl.NumberFormat().format(precio)
-    console.log(imagen)
+    // console.log(imagen)
   return (
     <nav className="navbar bg-dark fixed">
         <div className="container-fluid">
@@ -15,15 +22,15 @@ const Navbar = ({imagen, precio}) => {
             <p className='text-white mt-2 mx-3 fs-3'>{imagen.name}</p>
             </div>
             <form className="d-flex" role="search">
-            <button className="btn btn-success position-relative mx-3" type="submit">
+            <Link to={`/Tablas/${imagen.id}`} className="btn btn-success position-relative mx-3">
                 <BsCartCheck />
-                <span class="position-absolute top-5 start-100 translate-middle badge rounded-5 bg-danger">
+                <span className="position-absolute top-5 start-100 translate-middle badge rounded-5 bg-danger">
                     {precioFormatiado}
                 </span>
-            </button>
+            </Link>
             <Link className="btn btn-outline-primary" to="/">
                     Inicio
-                </Link>
+            </Link>
             </form>
         </div>
     </nav>

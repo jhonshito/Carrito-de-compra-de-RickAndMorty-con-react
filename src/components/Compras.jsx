@@ -35,7 +35,6 @@ const Compras = () => {
   const handleClick = () => {
 
     setValor(500)
-    setCantidad(1)
     if(valor >= 500){
       Swal.fire({
         title: 'Felicidades',
