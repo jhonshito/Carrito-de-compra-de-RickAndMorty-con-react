@@ -3,12 +3,13 @@ import {useState, useEffect} from 'react'
 import Swal from 'sweetalert2'
 import Loading from './Loading'
 import Navbar from '../Navbar'
-
+import { useContext } from 'react'
+import { UserContext } from '../context/UserProvide'
 const Compras = () => {
 
   const {id} = useParams()
+  const {cantidad, setCantidad} = useContext(UserContext)
   const [valor, setValor] = useState(500)
-  const [cantidad, setCantidad] = useState(1)
 
   let nuevoNumero = new Intl.NumberFormat().format(valor)
   // console.log(nuevoNumero)
