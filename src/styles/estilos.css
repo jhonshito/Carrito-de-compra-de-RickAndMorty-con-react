@@ -1,20 +1,104 @@
 
+.contenido{
+    display: flex;
+    justify-content: space-between;
+}
+
 .contenedor{
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
+    width: 46%;
     min-height: 500px;
     max-height: 2000px;
-    border: 1px solid black;
+    border: 1px solid #202020;
     border-radius: 10px;
+    background-color: #202020;
 }
 
 .bara{
+    display: flex;
+    justify-content: space-between;
     margin-top: 15px;
-    width: 95%;
-    height: 40px;
+    width: 96%;
+    min-height: 50px;
+    max-height: 70px;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid black;
+    border: 1px solid #323232;
+    border-radius: 16px;
+    background-color: #323232;
+    color: white;
+}
+
+.posicion-izquierda{
+    display: flex;
+    width: 60%;
+}
+
+.imagen{
+    width: 15%;
+    height: 40px;
+    border-radius: 80%;
+    margin-top: 4px;
+    margin-left: 5px;
+}
+
+.name{
+    font-size: 20px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+button{
+    padding: 7px 30px;
+    border: 1px solid #FF0101;
     border-radius: 10px;
+    margin-top: 5px;
+    margin-right: 5px;
+    background-color: #202020;
+    color: white;
+}
+
+button:hover {
+    border: 1px solid #FF0101;
+    background-color: #FF0101;
+}
+
+/* Aqui va los estilos de la descripcion del personaje elejido */
+
+.personaje{
+    width: 50%;
+    height: 320px;
+    border: 1px solid #2E3439;
+    border-radius: 15px;
+    background-color: #2E3439;
+    color: white;
+}
+
+.contenedor-imagen{
+    width: 50%;
+    height: 100px;
+    margin-left: 210px;
+    margin-top: 10px;
+}
+
+.imagen-personaje{
+    width: 50%;
+    height: 100px;
+    border-radius: 80px;
+}
+
+h4{
+    text-align: center;
+    margin-top: 9px;
+}
+
+.contenido-parrafo{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-around;
+}
+
+h5{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 10px;
 }
