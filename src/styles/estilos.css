@@ -15,7 +15,7 @@
 
 .bara{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 15px;
     width: 96%;
     min-height: 50px;
@@ -98,7 +98,38 @@ h4{
 }
 
 h5{
-    text-align: center;
+    margin-right: 8px;
     font-size: 25px;
     margin-top: 10px;
+}
+
+.genero-color{
+    display: flex;
+}
+
+.genero{
+    margin-right: 8px;
+}
+
+.text-primari{
+    color: #0ABEFF;
+}
+
+.text-succes {
+    color: #7F261E;
+}
+
+.estado-color{
+    display: flex;
+}
+
+.especie-color{
+    display: flex;
+    justify-content: center;
+}
+
+.linea{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }

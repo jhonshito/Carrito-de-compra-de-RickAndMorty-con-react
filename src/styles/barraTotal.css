@@ -1,0 +1,17 @@
+
+.baraTotal{
+    width: 90%;
+    height: 180px;
+    border: 1px solid #2E3439;
+    background-color: #2E3439;
+    border-radius: 10px;
+    margin-top: 70px;
+    margin-left: 25px;
+}
+
+.valor{
+    color: white;
+    text-align: center;
+    margin-top: 10%;
+    font-size: 60px;
+}

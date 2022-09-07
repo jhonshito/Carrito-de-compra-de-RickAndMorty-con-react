@@ -8,8 +8,8 @@ import { UserContext } from '../context/UserProvide'
 const Compras = () => {
 
   const {id} = useParams()
-  const {cantidad, setCantidad} = useContext(UserContext)
-  const [valor, setValor] = useState(500)
+  const {cantidad, setCantidad, valor, setValor} = useContext(UserContext)
+  // const [valor, setValor] = useState(500)
 
   let nuevoNumero = new Intl.NumberFormat().format(valor)
   // console.log(nuevoNumero)
