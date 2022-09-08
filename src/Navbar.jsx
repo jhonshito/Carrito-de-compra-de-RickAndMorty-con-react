@@ -18,7 +18,7 @@ const Navbar = ({imagen, precio}) => {
     <nav className="navbar bg-dark fixed">
         <div className="container-fluid">
             <div className='d-flex'>
-            <img src={imagen.image} alt="" width="55" height="55" className="d-inline-block align-text-top rounded-5 mt-1" />
+            <img src={imagen.image} alt="" width="55" height="55" className="d-inline-block align-text-top rounded-5 mt-1 animate__animated animate__infinite animate__pulse" />
             <p className='text-white mt-2 mx-3 fs-3'>{imagen.name}</p>
             </div>
             <form className="d-flex" role="search">

@@ -3,6 +3,7 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { useContext } from 'react'
+import { Link } from "react-router-dom"
 import '../styles/estilos.css'
 import { useParams } from 'react-router-dom'
 import { UserContext } from '../context/UserProvide'
@@ -67,11 +68,8 @@ const Tablas = () => {
   },[])
   return (
     <div className='container mt-3'>
-      {cantidad}
-      <hr />
-      {id}
 
-      <div className="contenido">
+      <div className="contenido animate__animated animate__backInDown">
         <div className="personaje">
           <div className='contenedor-imagen'>
             <img className='imagen-personaje shadow' src={data.image} alt="" />

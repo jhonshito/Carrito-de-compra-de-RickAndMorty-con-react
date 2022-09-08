@@ -8,8 +8,8 @@ const BarraTotal = () => {
 
   const nuevoValor = new Intl.NumberFormat().format(valor)
   return (
-    <div className='baraTotal shadow'>
-      <h1 className='valor'>Total : ${nuevoValor}</h1>
+    <div className='baraTotal'>
+      <h1 className='valor animate__animated animate__infinite animate__pulse'>Total : ${nuevoValor}</h1>
     </div>
   )
 }

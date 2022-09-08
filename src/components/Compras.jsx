@@ -1,4 +1,4 @@
-import {useParams} from 'react-router-dom'
+import {Link, useParams} from 'react-router-dom'
 import {useState, useEffect} from 'react'
 import Swal from 'sweetalert2'
 import Loading from './Loading'
@@ -34,7 +34,7 @@ const Compras = () => {
   }
 
   const handleClick = () => {
-
+    setCantidad(1)
     setValor(500)
     if(valor >= 500){
       Swal.fire({
@@ -42,7 +42,17 @@ const Compras = () => {
         text: `Compraste a : ${data.name} Con un valor de : $${nuevoNumero}`,
         imageUrl: `${data.image}`,
         imageWidth: 400,
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: 'Confirmar compra',
         imageHeight: 250
+      }).then((result) => {
+        if(result.isConfirmed){
+          Swal.fire({
+            icon: 'success',
+            title: 'Compra confirmada',
+            text: 'Querido usuario Tu compra ya fue confirmada'
+          })
+        }
       })
     }else {
       Swal.fire({
@@ -83,7 +93,7 @@ const Compras = () => {
 
     <div className="row justify-content-around my-5">
       <div className="col-md-8 col-lg-5 align-self-center">
-      <div className="card mb-3 bg-dark text-white">
+      <div className="card mb-3 bg-dark text-white animate__animated animate__backInUp">
         <div className="row">
           <div className="col-md-4">
             <img src={data.image} className="img-fluid rounded-start" alt="..." />
